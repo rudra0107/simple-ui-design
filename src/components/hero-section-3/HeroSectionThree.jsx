@@ -1,12 +1,6 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
-import dynamic from "next/dynamic";
-// import Loadable from "react-loadable";
-
-const World = dynamic(() => import("../ui/Globe").then((m) => m.World), {
-  ssr: false,
-});
+import { World } from "../ui/Globe";
 
 const HeroSectionThree = () => {
   const globeConfig = {
@@ -31,6 +25,7 @@ const HeroSectionThree = () => {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
+
   const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
   const sampleArcs = [
     {
